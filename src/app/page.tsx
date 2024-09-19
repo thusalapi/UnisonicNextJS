@@ -3,6 +3,7 @@ import FurnitureCategory from "@/components/FurnitureCategory";
 import HeroSection from "@/components/HeroSection";
 import Navbar from "@/components/Navbar";
 import ServicesSection from "@/components/ServicesSection";
+import WhySectionUnisonic from "@/components/WhySectionUnisonic";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -25,6 +26,7 @@ export default function Home() {
       <ServicesSection />
       <AboutSection />
       <FurnitureCategory />
+      <WhySectionUnisonic />
     </>
   );
 }
