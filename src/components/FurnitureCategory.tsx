@@ -34,7 +34,7 @@ const categories = [
 
 const FurnitureCategory = () => {
   return (
-    <div className="py-20 bg-gray-100">
+    <div className="py-20 bg-gray-200">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-8 text-black">
           Our Furniture Categories
@@ -46,7 +46,7 @@ const FurnitureCategory = () => {
           {categories.map((category, index) => (
             <div
               key={index}
-              className="relative bg-white shadow-lg rounded-lg overflow-hidden w-full sm:w-1/2 md:w-1/3 flex flex-col text-center"
+              className="relative bg-white shadow-lg rounded-lg overflow-hidden w-full sm:w-1/2 md:w-1/3 flex flex-col text-center transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
             >
               <div className="relative h-64">
                 <Image
