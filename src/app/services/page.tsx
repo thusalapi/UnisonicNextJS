@@ -33,7 +33,8 @@ const services = [
 const ServicesPage = () => {
   return (
     <div className="bg-gray-100">
-      <div className="container mx-auto px-4 py-16">
+      <Navbar backgroundColor="bg-green-950" />
+      <div className="container mx-auto px-4 py-56">
         <h1 className="text-4xl font-bold text-gray-800 mb-8 text-center">
           Our Services
         </h1>
@@ -50,7 +51,7 @@ const ServicesPage = () => {
           ))}
         </div>
 
-        <div className="mt-16">
+        <div className="mt-24">
           <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
             Our Process
           </h2>
@@ -68,7 +69,7 @@ const ServicesPage = () => {
           </div>
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-24 text-center">
           <h2 className="text-3xl font-semibold text-gray-800 mb-4">
             Ready to Start Your Project?
           </h2>

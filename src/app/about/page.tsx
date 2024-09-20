@@ -1,12 +1,14 @@
 import React from "react";
 import Image from "next/image";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const AboutPage = () => {
   return (
     <div className="bg-white">
+      <Navbar backgroundColor="bg-green-950" />
       <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-gray-800 mb-8">
+        <h1 className="text-4xl font-bold text-gray-800 mb-8 mt-36">
           About Unisonic
         </h1>
 
@@ -47,7 +49,7 @@ const AboutPage = () => {
           </div>
         </div>
 
-        <div className="mt-16">
+        <div className="mt-20 pb-8">
           <h2 className="text-2xl font-semibold text-gray-700 mb-6">
             Our Values
           </h2>
