@@ -31,7 +31,7 @@ const Navbar: React.FC<NavbarProps> = ({ backgroundColor, textColor }) => {
               <Link
                 key={item.label}
                 href={item.href}
-                className={`font-itim leading-normal text-lg hover:text-blue-400 transition-colors duration-200 ${textColor}`}
+                className={`font-itim leading-normal text-lg hover:text-green-500 transition-colors duration-200 ${textColor}`}
               >
                 {item.label}
               </Link>
@@ -53,7 +53,7 @@ const Navbar: React.FC<NavbarProps> = ({ backgroundColor, textColor }) => {
             <li key={item.label}>
               <Link
                 href={item.href}
-                className={`font-itim leading-normal text-lg hover:text-blue-400 transition-colors duration-200 ${textColor}`}
+                className={`font-itim leading-normal text-lg hover:text-green-500 transition-colors duration-200 ${textColor}`}
               >
                 {item.label}
               </Link>

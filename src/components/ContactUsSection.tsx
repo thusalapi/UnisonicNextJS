@@ -128,15 +128,19 @@ const ContactUs = () => {
               <div className="space-y-4">
                 <p className="flex items-center">
                   <FaEnvelope className="mr-3 text-xl" />
-                  info@unisonic.com
+                  info@unisonic.lk
                 </p>
                 <p className="flex items-center">
                   <FaPhone className="mr-3 text-xl" />
-                  +94 123 456 789
+                  +94 777 878 663
                 </p>
                 <p className="flex items-center">
                   <FaMapMarkerAlt className="mr-3 text-xl" />
-                  123 Main Street, Colombo, Sri Lanka
+                  173A, Siddamulla, Piliyandala, Sri Lanka.
+                </p>
+                <p className="flex items-center">
+                  <FaMapMarkerAlt className="mr-3 text-xl" />
+                  246, Negombo Road, Negombo, Kandana Sri Lanka.
                 </p>
               </div>
             </div>

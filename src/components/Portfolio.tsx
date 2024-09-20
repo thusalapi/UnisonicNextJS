@@ -32,7 +32,13 @@ const projects = [
       "A calming bedroom design focusing on simplicity and tranquility.",
     image: img3,
   },
-  // Add more projects as needed
+  {
+    id: 4,
+    title: "Minimalist Bedroom Suite",
+    description:
+      "A calming bedroom design focusing on simplicity and tranquility.",
+    image: img4,
+  },
 ];
 
 const Portfolio = () => {
@@ -118,7 +124,7 @@ const Portfolio = () => {
               </div>
             </motion.div>
           </AnimatePresence>
-          <button
+          {/* <button
             onClick={prevSlide}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 transition-all duration-300"
           >
@@ -129,7 +135,7 @@ const Portfolio = () => {
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 transition-all duration-300"
           >
             &#8594;
-          </button>
+          </button> */}
         </div>
         <div className="flex justify-center mt-8">
           {projects.map((_, index) => (

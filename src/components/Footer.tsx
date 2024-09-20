@@ -138,10 +138,10 @@ const Footer = () => {
           {/* Contact Info */}
           <div>
             <h4 className="text-xl font-semibold mb-4">Contact Us</h4>
-            <p className="mb-2">123 Furniture Street</p>
-            <p className="mb-2">Colombo, Sri Lanka</p>
-            <p className="mb-2">Phone: +94 123 456 789</p>
-            <p>Email: info@unisonic.com</p>
+            <p className="mb-2">173A, Siddamulla, </p>
+            <p className="mb-2">Piliyandala, Sri Lanka.</p>
+            <p className="mb-2">Phone: +94 777 878 663</p>
+            <p>Email: info@unisonic.lk</p>
           </div>
         </div>
 
