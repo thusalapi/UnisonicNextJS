@@ -1,5 +1,5 @@
 import Image from "next/image";
-import aboutImage from "../assets/images/pantry2.png";
+import aboutImage from "../assets/images/aboutus.png";
 import { FaLeaf, FaTools, FaPaintBrush } from "react-icons/fa";
 
 const AboutSection = () => {
