@@ -1,5 +1,3 @@
-// src/constants.ts
-
 export const navLinks = [
   {
     label: "Home",

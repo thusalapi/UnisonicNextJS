@@ -37,7 +37,7 @@ const ServicesSection = () => {
         <p className="text-lg text-center text-black mb-12">
           Experience the Unisonic difference: Personalized furniture solutions.
         </p>
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="flex flex-wrap justify-center gap-10 pb-5">
           {services.map((service, index) => (
             <div
               key={index}

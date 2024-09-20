@@ -1,11 +1,12 @@
 import AboutSection from "@/components/AboutSection";
+import ContactUs from "@/components/ContactUsSection";
+import Footer from "@/components/Footer";
 import FurnitureCategory from "@/components/FurnitureCategory";
 import HeroSection from "@/components/HeroSection";
 import Navbar from "@/components/Navbar";
+import Portfolio from "@/components/Portfolio";
 import ServicesSection from "@/components/ServicesSection";
 import WhySectionUnisonic from "@/components/WhySectionUnisonic";
-import Image from "next/image";
-import Link from "next/link";
 
 const featuredProducts = [
   { id: 1, name: "Sofa", image: "/images/sofa.jpg", link: "/products/sofa" },
@@ -27,6 +28,9 @@ export default function Home() {
       <AboutSection />
       <FurnitureCategory />
       <WhySectionUnisonic />
+      <Portfolio />
+      <ContactUs />
+      <Footer />
     </>
   );
 }
