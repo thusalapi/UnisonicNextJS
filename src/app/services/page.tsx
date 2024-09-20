@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import Link from "next/link";
 import React from "react";
 import { FaCouch, FaPencilRuler, FaHome, FaTools } from "react-icons/fa";
 
@@ -32,16 +33,16 @@ const services = [
 
 const ServicesPage = () => {
   return (
-    <div className="bg-gray-100">
-      <Navbar backgroundColor="bg-green-950" />
-      <div className="container mx-auto px-4 py-56">
-        <h1 className="text-4xl font-bold text-gray-800 mb-8 text-center">
+    <div className="bg-gray-200">
+      <Navbar textColor="text-black" />
+      <div className="container mx-auto px-4 py-12">
+        <h1 className="text-4xl font-bold text-gray-800 mb-12 text-center mt-44">
           Our Services
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+            <div key={index} className="bg-gray-100 p-6 rounded-lg shadow-md">
               <service.icon className="text-4xl text-green-600 mb-4" />
               <h2 className="text-2xl font-semibold text-gray-700 mb-2">
                 {service.title}
@@ -52,14 +53,14 @@ const ServicesPage = () => {
         </div>
 
         <div className="mt-24">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
+          <h2 className="text-3xl font-semibold text-gray-800 mb-12 text-center">
             Our Process
           </h2>
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
             {["Consultation", "Design", "Creation", "Delivery"].map(
               (step, index) => (
                 <div key={index} className="flex items-center mb-4 md:mb-0">
-                  <div className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                  <div className="bg-green-600 text-white rounded-full w-16 h-16 flex items-center justify-center mr-3">
                     {index + 1}
                   </div>
                   <span className="text-gray-700 font-medium">{step}</span>
@@ -69,16 +70,18 @@ const ServicesPage = () => {
           </div>
         </div>
 
-        <div className="mt-24 text-center">
+        <div className="mt-24 text-center mb-6">
           <h2 className="text-3xl font-semibold text-gray-800 mb-4">
             Ready to Start Your Project?
           </h2>
           <p className="text-gray-600 mb-8">
             Contact us today for a free consultation and quote.
           </p>
-          <button className="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition duration-300">
-            Contact Us
-          </button>
+          <Link href="/contact">
+            <button className="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition duration-300">
+              Contact Us
+            </button>
+          </Link>
         </div>
       </div>
       <Footer />

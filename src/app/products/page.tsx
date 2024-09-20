@@ -79,11 +79,11 @@ const CategoryPage = ({ params }: { params: { category: string } }) => {
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-200">
-      <Navbar backgroundColor="bg-green-950" />
+      <Navbar textColor="text-black" />
       <main className="flex-grow">
         <div className="container mx-auto px-4 py-16">
           <h1 className="text-4xl font-light text-gray-800 mb-4 text-center capitalize mt-36">
-            {params.category?.replace("-", " ") ?? "Default"} Collection
+            Explore Collection
           </h1>
           {currentCategory && (
             <p className="text-xl text-gray-600 mb-8 text-center max-w-2xl mx-auto">
@@ -91,8 +91,8 @@ const CategoryPage = ({ params }: { params: { category: string } }) => {
             </p>
           )}
 
-          <div className="mb-12">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+          <div className="mt-16 mb-24">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4 mt-10">
               Our Categories
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -102,12 +102,12 @@ const CategoryPage = ({ params }: { params: { category: string } }) => {
                     .toLowerCase()
                     .replace(" ", "-")}`}
                   key={category.name}
-                  className="block p-4 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-300"
+                  className="block p-14 text-lg bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-300"
                 >
-                  <h3 className="text-lg font-semibold text-gray-800">
+                  <h3 className="text-2xl font-semibold text-gray-800">
                     {category.name}
                   </h3>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-lg text-gray-600">
                     {category.description}
                   </p>
                 </Link>

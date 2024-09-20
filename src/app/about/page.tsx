@@ -5,8 +5,8 @@ import Footer from "@/components/Footer";
 
 const AboutPage = () => {
   return (
-    <div className="bg-white">
-      <Navbar backgroundColor="bg-green-950" />
+    <div className="bg-gray-200">
+      <Navbar textColor="text-black" />
       <div className="container mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold text-gray-800 mb-8 mt-36">
           About Unisonic
