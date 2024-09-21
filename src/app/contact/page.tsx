@@ -20,34 +20,6 @@ const ContactPage = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus(null);
-
-    try {
-      // Replace this with your actual API endpoint
-      const response = await fetch("/api/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setSubmitStatus("success");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        setSubmitStatus("error");
-      }
-    } catch {
-      setSubmitStatus("error");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-b bg-gray-200 text-white">
       <Navbar textColor="text-black" />
@@ -95,10 +67,7 @@ const ContactPage = () => {
             </div>
 
             {/* Contact Form */}
-            <form
-              onSubmit={sendEmail}
-              className="bg-gray-300 text-gray-800 p-8 rounded-lg shadow-xl"
-            >
+            <form className="bg-gray-300 text-gray-800 p-8 rounded-lg shadow-xl">
               <div className="mb-6">
                 <label className="block text-lg mb-2 font-semibold">Name</label>
                 <input

@@ -18,34 +18,6 @@ const ContactUs = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus(null);
-
-    try {
-      // Replace this with your actual API endpoint
-      const response = await fetch("/api/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setSubmitStatus("success");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        setSubmitStatus("error");
-      }
-    } catch {
-      setSubmitStatus("error");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <div className="py-20 bg-gradient-to-b from-green-950 to-black text-white">
       <div className="container mx-auto px-4 pb-6">
@@ -54,10 +26,7 @@ const ContactUs = () => {
         <div className="flex flex-wrap -mx-4">
           {/* Contact Form */}
           <div className="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
-            <form
-              onSubmit={sendEmail}
-              className="bg-white text-gray-800 p-8 rounded-lg shadow-xl"
-            >
+            <form className="bg-white text-gray-800 p-8 rounded-lg shadow-xl">
               <div className="mb-6">
                 <label className="block text-lg mb-2 font-semibold">Name</label>
                 <input
