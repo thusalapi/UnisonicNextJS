@@ -101,12 +101,12 @@ const CategoryPage = ({ params }: { params: { category: string } }) => {
               Our Categories
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {categories.map((category) => (
+              {categories.map(({ name, description, image }) => (
                 <CategoryCard
-                  key={category.name}
-                  name={category.name}
-                  description={category.description}
-                  image={category.image}
+                  key={name}
+                  name={name}
+                  description={description}
+                  image={image}
                 />
               ))}
             </div>
