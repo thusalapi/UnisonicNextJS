@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CategoryCard from "@/components/CategoryCard";
@@ -8,18 +7,8 @@ import img1 from "../../assets/images/img3.png";
 import img2 from "../../assets/images/img2.png";
 import img3 from "../../assets/images/img20.png";
 import img4 from "../../assets/images/img21.png";
-import categoryImg1 from "../../assets/images/category1.png"; // Example category images
-import categoryImg2 from "../../assets/images/category2.png";
-import categoryImg3 from "../../assets/images/category3.png";
-import categoryImg4 from "../../assets/images/category4.png";
-import Image from "next/image";
 
 const categories = [
-  // {
-  //   name: "All",
-  //   description: "Discover all options to fulfil your dream furniture.",
-  //   image: img2, // Add image for the category
-  // },
   {
     name: "Living Room",
     description: "Stylish and comfortable furniture for your living space.",
@@ -122,37 +111,6 @@ const CategoryPage = ({ params }: { params: { category: string } }) => {
               ))}
             </div>
           </div>
-
-          {/* <h2 className="text-3xl font-semibold text-gray-800 mb-8">
-            Featured Products
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {products.map((product) => (
-              <Link
-                href={`/products/${params.category}/${product.id}`}
-                key={product.id}
-                className="group"
-              >
-                <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-                  <div className="relative w-full h-64">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      style={{ objectFit: "cover" }}
-                      className="transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                      {product.name}
-                    </h3>
-                    <p className="text-gray-600 text-lg">${product.price}</p>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div> */}
         </div>
       </main>
       <Footer />

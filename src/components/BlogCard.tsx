@@ -1,11 +1,15 @@
 import React from "react";
+import Image from "next/image";
 import { BlogPost } from "@/constants/blogData";
+import img2 from "@/assets/images/img2.png";
 
 const BlogCard: React.FC<{ post: BlogPost }> = ({ post }) => (
   <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
-    <img
-      src={post.imageUrl}
+    <Image
+      src={img2}
       alt={post.title}
+      width={600}
+      height={192}
       className="w-full h-48 object-cover"
     />
     <div className="p-6">

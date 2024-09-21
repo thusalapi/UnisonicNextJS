@@ -23,7 +23,7 @@ export default function ProductPage({
               Product not found
             </h1>
             <p className="mt-4">
-              Sorry, we couldn't find the product you're looking for.
+              Sorry, we couldn&apos;t find the product you&apos;re looking for.
             </p>
             <Link
               href="/products/all"

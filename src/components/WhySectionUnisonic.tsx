@@ -31,9 +31,9 @@ const WhySectionUnisonic = () => {
               Elevate Your Living Space
             </h2>
             <p className="text-lg mb-8 animate-fade-in-right delay-100">
-              At Unisonic, we don't just create furniture; we craft experiences.
-              Our commitment to quality, innovation, and customer satisfaction
-              sets us apart in the world of interior design.
+              At Unisonic, we don&apos;t just create furniture; we craft
+              experiences. Our commitment to quality, innovation, and customer
+              satisfaction sets us apart in the world of interior design.
             </p>
             <ul className="space-y-4 mb-8">
               {[

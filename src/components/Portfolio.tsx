@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
 import img1 from "../assets/images/img3.png";
@@ -67,12 +66,12 @@ const Portfolio = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
   };
 
-  const prevSlide = () => {
-    setDirection(-1);
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + projects.length) % projects.length
-    );
-  };
+  // const prevSlide = () => {
+  //   setDirection(-1);
+  //   setCurrentIndex(
+  //     (prevIndex) => (prevIndex - 1 + projects.length) % projects.length
+  //   );
+  // };
 
   useEffect(() => {
     const timer = setInterval(() => {

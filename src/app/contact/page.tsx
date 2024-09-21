@@ -41,7 +41,7 @@ const ContactPage = () => {
       } else {
         setSubmitStatus("error");
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -63,9 +63,9 @@ const ContactPage = () => {
         <div className="bg-gray-300 p-8 rounded-lg shadow-xl mb-24">
           <p className="text-xl text-black text-center">
             Whether you have a specific vision in mind or need expert guidance,
-            we're here to help. Reach out to our friendly team through any of
-            the options below, and let's spark a conversation about creating
-            furniture that truly reflects your story.
+            we&apos;re here to help. Reach out to our friendly team through any
+            of the options below, and let&apos;s spark a conversation about
+            creating furniture that truly reflects your story.
           </p>
         </div>
 

@@ -33,8 +33,8 @@ const AboutPage = () => {
               functionality with aesthetic appeal.
             </p>
             <p className="text-gray-600 mb-4">
-              Over the years, we've grown from a small workshop to a leading
-              name in the furniture industry, never losing sight of our
+              Over the years, we&apos;ve grown from a small workshop to a
+              leading name in the furniture industry, never losing sight of our
               commitment to craftsmanship and customer satisfaction.
             </p>
             <h2 className="text-2xl font-semibold text-gray-700 my-4">
@@ -68,7 +68,7 @@ const AboutPage = () => {
               {
                 title: "Sustainability",
                 description:
-                  "We're committed to environmentally responsible practices in our production.",
+                  "We&apos;re committed to environmentally responsible practices in our production.",
               },
             ].map((value, index) => (
               <div key={index} className="bg-gray-100 p-6 rounded-lg">

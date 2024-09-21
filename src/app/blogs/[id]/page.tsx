@@ -1,14 +1,15 @@
 "use client";
 import React from "react";
-import { useParams, useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 import Link from "next/link";
 import { blogPosts } from "@/constants/blogData";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Image from "next/image";
+import img4 from "@/assets/images/img2.png";
 
 const BlogPostPage: React.FC = () => {
   const { id } = useParams();
-  const router = useRouter();
   const post = blogPosts.find((post) => post.id === Number(id));
 
   if (!post) {
@@ -23,10 +24,12 @@ const BlogPostPage: React.FC = () => {
     <div className="min-h-screen bg-gray-200 text-black">
       <Navbar textColor="text-black" />
       <div className="container w-2/4 mx-auto px-4 py-12 mb-12">
-        <img
-          src={post.imageUrl}
+        <Image
+          src={img4}
           alt={post.title}
           className="w-full h-64 object-cover rounded-lg mb-8 mt-44"
+          width={800}
+          height={256}
         />
         <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
         <div className="flex justify-between items-center mb-8">
