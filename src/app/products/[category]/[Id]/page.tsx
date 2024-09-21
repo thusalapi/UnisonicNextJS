@@ -3,49 +3,31 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { getProductById, products } from "@/constants";
+import { getProductById } from "@/constants";
 
 export default function ProductPage({
   params,
 }: {
   params: { category: string; id?: string; Id?: string };
 }) {
-  // Handle both lowercase 'id' and uppercase 'Id'
   const productId = params.id || params.Id;
-
-  console.log("Params:", params); // Debugging
-  console.log("Product ID:", productId); // Debugging
-  console.log("All products:", products); // Debugging
-
   const product = productId ? getProductById(productId) : null;
-  console.log("Found product:", product); // Debugging
 
   if (!product) {
     return (
-      <div className="flex flex-col min-h-screen bg-slate-200">
+      <div className="flex flex-col min-h-screen bg-gray-50">
         <Navbar textColor="text-black" />
-        <main className="flex-grow container mx-auto px-4 py-16 text-black">
+        <main className="flex-grow container mx-auto px-4 py-16">
           <div className="mt-36 bg-white rounded-lg shadow-lg p-8">
             <h1 className="text-2xl font-bold text-red-600">
               Product not found
             </h1>
             <p className="mt-4">
-              Sorry, we couldn't find a product with ID {params.id} in the{" "}
-              {params.category} category.
-            </p>
-            <p className="mt-4">
-              Debug info:
-              <br />
-              Params: {JSON.stringify(params)}
-              <br />
-              Available products:{" "}
-              {JSON.stringify(
-                products.map((p) => ({ id: p.id, category: p.category }))
-              )}
+              Sorry, we couldn't find the product you're looking for.
             </p>
             <Link
               href="/products/all"
-              className="mt-4 inline-block bg-green-800 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors duration-300"
+              className="mt-6 inline-block bg-green-800 text-white px-6 py-3 rounded-md hover:bg-green-700 transition-colors duration-300"
             >
               Back to All Products
             </Link>
@@ -57,35 +39,59 @@ export default function ProductPage({
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-slate-200">
+    <div className="flex flex-col min-h-screen bg-gray-50">
       <Navbar textColor="text-black" />
       <main className="flex-grow container mx-auto px-4 py-16">
-        <div className="mt-36 bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="mt-24 bg-white rounded-xl shadow-lg overflow-hidden">
           <div className="md:flex">
-            <div className="md:flex-shrink-0">
-              <Image
-                src={product.image}
-                alt={product.name}
-                width={500}
-                height={500}
-                className="h-full w-full object-cover md:w-48"
-              />
+            {/* Large Product Image */}
+            <div className="md:w-2/3">
+              <div className="relative h-96 md:h-full">
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  layout="fill"
+                  objectFit="cover"
+                  className="transition-transform duration-300 hover:scale-105"
+                />
+              </div>
             </div>
-            <div className="p-8">
-              <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
+
+            {/* Product Information */}
+            <div className="md:w-1/3 p-8">
+              <div className="uppercase tracking-wide text-sm text-green-700 font-semibold">
                 {product.category}
               </div>
-              <h1 className="mt-1 text-4xl font-medium leading-tight text-gray-900">
+              <h1 className="mt-2 text-3xl font-bold text-gray-900 leading-tight">
                 {product.name}
               </h1>
-              <p className="mt-2 text-gray-600">{product.description}</p>
-              <p className="mt-4 text-2xl font-bold text-gray-900">
+              <p className="mt-4 text-4xl font-bold text-green-800">
                 ${product.price}
               </p>
-              <div className="mt-6">
+              <div className="mt-6 space-y-4">
+                <h2 className="text-xl font-semibold text-gray-700">
+                  Description
+                </h2>
+                <p className="text-gray-600">{product.description}</p>
+              </div>
+              <div className="mt-8 space-y-4">
+                <h2 className="text-xl font-semibold text-gray-700">
+                  Features
+                </h2>
+                <ul className="list-disc list-inside text-gray-600">
+                  <li>High-quality materials</li>
+                  <li>Ergonomic design</li>
+                  <li>Easy to clean</li>
+                  <li>Durable construction</li>
+                </ul>
+              </div>
+              <div className="mt-10 space-y-4">
+                <button className="w-full bg-green-800 text-white px-6 py-3 rounded-md hover:bg-green-700 transition-colors duration-300">
+                  Add to Cart
+                </button>
                 <Link
                   href={`/products/${product.category}`}
-                  className="inline-block bg-green-800 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors duration-300"
+                  className="block text-center w-full border border-green-800 text-green-800 px-6 py-3 rounded-md hover:bg-green-50 transition-colors duration-300"
                 >
                   Back to {product.category}
                 </Link>

@@ -11,6 +11,10 @@ import img4 from "../../assets/images/img21.png";
 
 const categories = [
   {
+    name: "All",
+    description: "Discover all options to fulfil your dream furniture.",
+  },
+  {
     name: "Living Room",
     description: "Stylish and comfortable furniture for your living space.",
   },
