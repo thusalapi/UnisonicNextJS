@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Menu as MenuIcon, Close as CloseIcon } from "@mui/icons-material";
 import { navLinks } from "../constants";
+import Image from "next/image";
+import logo from "../../public/logo.png";
 
 interface NavbarProps {
   backgroundColor?: string; // Tailwind background color class
@@ -23,8 +25,8 @@ const Navbar: React.FC<NavbarProps> = ({ backgroundColor, textColor }) => {
     >
       <div className="max-w-3/4 mx-auto px-4 py-8">
         <nav className="flex justify-between items-center">
-          <Link href="/" className={`text-3xl font-extrabold ${textColor}`}>
-            Unisonic
+          <Link href="/" className={`text-3xl font-extrabold ml-5`}>
+            <Image src={logo} alt="Unisonic Logo" width={150} />
           </Link>
           <div className="hidden md:flex flex-1 justify-center items-center gap-16">
             {navLinks.map((item) => (

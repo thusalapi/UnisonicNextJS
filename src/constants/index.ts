@@ -24,10 +24,10 @@ export const navLinks = [
     label: "Blogs",
     href: "/blogs",
   },
-  {
-    label: "Projects",
-    href: "/projects",
-  },
+  // {
+  //   label: "Projects",
+  //   href: "/projects",
+  // },
   {
     label: "Contact",
     href: "/contact",

@@ -11,20 +11,25 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: 1,
-    title: "The Art of Minimalist Furniture Design",
+    title:
+      "Crafting a Greener Tomorrow: The Rise of Sustainable Furniture Design",
     excerpt:
-      "Discover how less can be more in furniture design and create a serene living space.",
-    content: `Minimalist furniture design is about creating functional, beautiful pieces with clean lines and simple forms. This approach to design emphasizes the essentials, removing unnecessary ornamentation to highlight the beauty of the materials and craftsmanship.
-  
-  Key principles of minimalist furniture design include:
-  1. Simplicity in form and function
-  2. High-quality materials
-  3. Neutral color palettes
-  4. Emphasis on negative space
-  5. Multifunctional pieces
-  
-  By incorporating minimalist furniture into your home, you can create a calm, uncluttered environment that promotes relaxation and focus. Remember, in minimalist design, every piece should serve a purpose and contribute to the overall aesthetic of the space.`,
-    author: "Emma Thompson",
+      "Discover how sustainable practices are reshaping the furniture industry.",
+    content: `
+Once upon a time, in the heart of every home, the kitchen whispered tales of delicious creations, warm gatherings, and cherished memories. Today, as we navigate a world that calls for sustainable living, the story of your kitchen can take on a new chapter with an eco-friendly customized pantry cupboard. Picture this: a meticulously crafted storage space that not only caters to your unique needs but also treads lightly on our planet, incorporating aluminum and eco boards to weave a tale of sophistication and environmental responsibility.
+
+
+In the pursuit of creating a kitchen oasis, one cannot overlook the numerous benefits that come with opting for an eco-friendly customized pantry cupboard. According to a recent study by the Environmental Protection Agency (EPA), incorporating aluminum in furniture significantly reduces carbon emissions compared to traditional materials. The lightweight nature of aluminum allows for easy customization, ensuring your pantry cupboard aligns seamlessly with your kitchen's layout.
+
+Furthermore, eco boards, made from recycled and sustainable materials, promise durability and resilience while minimizing the ecological footprint. A study conducted by the Green Building Council found that eco boards not only contribute to a healthier indoor environment but also play a vital role in promoting sustainable forestry practices. By choosing these materials, you're not just investing in a pantry cupboard; you're investing in the future of our planet.
+
+
+Your Dream Pantry Cupboard Enter Unisonic, a forward-thinking furniture company committed to transforming your kitchen dreams into reality. Through their expertise in blending aluminum and eco boards, Unisonic crafts customized pantry cupboards that are as unique as the stories told within your kitchen. Imagine sleek, modern designs that seamlessly integrate with your aesthetic preferences while embodying eco-conscious values.
+
+Unisonic's commitment to sustainability goes beyond materials; their innovative designs maximize storage efficiency, reducing the need for excess space and materials. The result? A pantry cupboard that not only caters to your practical needs but also aligns with your desire to make eco-friendly choices in every aspect of life.
+
+As we stand at the cusp of a more conscientious era, the decision to invest in an eco-friendly customized pantry cupboard becomes not just a choice but a statement. Unisonic empowers you to curate a kitchen space that reflects your style, caters to your needs, and champions the cause of sustainability. So, as you embark on this journey to transform your kitchen, ask yourself: Can your pantry cupboard be more than just storage? Can it be a testament to your commitment to a greener tomorrow?`,
+    author: "Thusala Piyarisi",
     date: "2024-09-15",
     imageUrl: "/api/placeholder/800/400",
   },
