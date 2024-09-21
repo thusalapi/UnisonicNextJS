@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import aboutus from "@/assets/images/aboutus.png";
 
 const AboutPage = () => {
   return (
@@ -15,7 +16,7 @@ const AboutPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <Image
-              src="/images/about-image.jpg"
+              src={aboutus}
               alt="Unisonic workshop"
               width={600}
               height={400}

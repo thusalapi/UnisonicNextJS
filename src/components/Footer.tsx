@@ -23,25 +23,19 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://facebook.com/unisonicsolutions"
                 className="text-white hover:text-green-400 transition-colors"
               >
                 <FaFacebookF size={20} />
               </a>
               <a
-                href="#"
-                className="text-white hover:text-green-400 transition-colors"
-              >
-                <FaTwitter size={20} />
-              </a>
-              <a
-                href="#"
+                href="https://www.instagram.com/unisonicsolutions"
                 className="text-white hover:text-green-400 transition-colors"
               >
                 <FaInstagram size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/unisonic-interior-solution-pvt-limited"
                 className="text-white hover:text-green-400 transition-colors"
               >
                 <FaLinkedinIn size={20} />
@@ -79,10 +73,10 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/portfolio"
+                  href="/products"
                   className="hover:text-green-400 transition-colors"
                 >
-                  Portfolio
+                  Products
                 </Link>
               </li>
               <li>
@@ -102,7 +96,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/services/custom-furniture"
+                  href="/services"
                   className="hover:text-green-400 transition-colors"
                 >
                   Custom Furniture
@@ -110,7 +104,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/services/interior-design"
+                  href="/services"
                   className="hover:text-green-400 transition-colors"
                 >
                   Interior Design
@@ -118,7 +112,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/services/space-planning"
+                  href="/services"
                   className="hover:text-green-400 transition-colors"
                 >
                   Space Planning
@@ -126,7 +120,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/services/restoration"
+                  href="/services"
                   className="hover:text-green-400 transition-colors"
                 >
                   Furniture Restoration
