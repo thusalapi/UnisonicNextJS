@@ -36,7 +36,7 @@ const ServicesPage = () => {
     <div className="bg-gray-200">
       <Navbar textColor="text-black" />
       <div className="container mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold text-gray-800 mb-12 text-center mt-44">
+        <h1 className="text-5xl font-bold text-gray-800 mb-12 text-center mt-44">
           Our Services
         </h1>
 
