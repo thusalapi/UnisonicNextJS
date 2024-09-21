@@ -43,7 +43,7 @@ const categories = [
   },
 ];
 
-const getProductsByCategory = (_category: string) => {
+const getProductsByCategory = () => {
   return [
     {
       id: 1,
@@ -73,7 +73,7 @@ const getProductsByCategory = (_category: string) => {
 };
 
 const CategoryPage = ({ params }: { params: { category: string } }) => {
-  const products = getProductsByCategory(params.category);
+  const products = getProductsByCategory();
   const currentCategory = categories.find(
     (cat) => cat.name.toLowerCase() === params.category
   );
