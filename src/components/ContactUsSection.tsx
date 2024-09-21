@@ -9,8 +9,6 @@ const ContactUs = () => {
     email: "",
     message: "",
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -69,22 +67,10 @@ const ContactUs = () => {
 
               <button
                 type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-green-600 text-white py-3 rounded-lg text-lg font-semibold hover:bg-green-700 transition duration-300"
+                className="w-full bg-green-800 text-white py-3 rounded-lg text-lg font-semibold hover:bg-green-700 transition duration-300"
               >
-                {isSubmitting ? "Sending..." : "Send Message"}
+                {"Send Message"}
               </button>
-
-              {submitStatus === "success" && (
-                <p className="mt-4 text-green-600">
-                  Message sent successfully!
-                </p>
-              )}
-              {submitStatus === "error" && (
-                <p className="mt-4 text-red-600">
-                  Failed to send message. Please try again.
-                </p>
-              )}
             </form>
           </div>
 
