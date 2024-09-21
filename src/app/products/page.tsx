@@ -43,7 +43,7 @@ const categories = [
   },
 ];
 
-const getProductsByCategory = (category: string) => {
+const getProductsByCategory = (_category: string) => {
   return [
     {
       id: 1,
