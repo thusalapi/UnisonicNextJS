@@ -8,7 +8,7 @@ const AboutPage = () => {
     <div className="bg-gray-200">
       <Navbar textColor="text-black" />
       <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-gray-800 mb-8 mt-36">
+        <h1 className="text-5xl font-bold text-gray-800 mb-12 mt-44">
           About Unisonic
         </h1>
 

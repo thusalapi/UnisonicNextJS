@@ -1,44 +1,56 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import CategoryCard from "@/components/CategoryCard";
 
 import img1 from "../../assets/images/img3.png";
 import img2 from "../../assets/images/img2.png";
 import img3 from "../../assets/images/img20.png";
 import img4 from "../../assets/images/img21.png";
+import categoryImg1 from "../../assets/images/category1.png"; // Example category images
+import categoryImg2 from "../../assets/images/category2.png";
+import categoryImg3 from "../../assets/images/category3.png";
+import categoryImg4 from "../../assets/images/category4.png";
+import Image from "next/image";
 
 const categories = [
-  {
-    name: "All",
-    description: "Discover all options to fulfil your dream furniture.",
-  },
+  // {
+  //   name: "All",
+  //   description: "Discover all options to fulfil your dream furniture.",
+  //   image: img2, // Add image for the category
+  // },
   {
     name: "Living Room",
     description: "Stylish and comfortable furniture for your living space.",
+    image: img1,
   },
   {
     name: "Office",
     description:
       "Functional and ergonomic solutions for your work environment.",
-  },
-  {
-    name: "Children",
-    description: "Fun and safe furniture designed for kids of all ages.",
+    image: img3,
   },
   {
     name: "Pantry Cupboard",
     description: "Efficient storage solutions for your kitchen and pantry.",
+    image: img1,
   },
   {
-    name: "Under Stairbase Cabinets",
+    name: "Children",
+    description: "Fun and safe furniture designed for kids of all ages.",
+    image: img4,
+  },
+  {
+    name: "Under Staircase Cabinets",
     description: "Clever storage options to maximize space under staircases.",
+    image: img2,
   },
   {
     name: "Custom Made",
     description:
       "Bespoke furniture tailored to your specific needs and preferences.",
+    image: img3,
   },
 ];
 
@@ -86,7 +98,7 @@ const CategoryPage = ({ params }: { params: { category: string } }) => {
       <Navbar textColor="text-black" />
       <main className="flex-grow">
         <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-light text-gray-800 mb-4 text-center capitalize mt-36">
+          <h1 className="text-5xl font-bold text-gray-800 mb-12 text-center mt-44">
             Explore Collection
           </h1>
           {currentCategory && (
@@ -96,30 +108,22 @@ const CategoryPage = ({ params }: { params: { category: string } }) => {
           )}
 
           <div className="mt-16 mb-24">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4 mt-10">
+            <h2 className="text-3xl font-semibold text-gray-800 mb-6 mt-10">
               Our Categories
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {categories.map((category) => (
-                <Link
-                  href={`/products/${category.name
-                    .toLowerCase()
-                    .replace(" ", "-")}`}
+                <CategoryCard
                   key={category.name}
-                  className="block p-14 text-lg bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-300"
-                >
-                  <h3 className="text-2xl font-semibold text-gray-800">
-                    {category.name}
-                  </h3>
-                  <p className="text-lg text-gray-600">
-                    {category.description}
-                  </p>
-                </Link>
+                  name={category.name}
+                  description={category.description}
+                  image={category.image}
+                />
               ))}
             </div>
           </div>
 
-          <h2 className="text-3xl font-semibold text-gray-800 mb-8">
+          {/* <h2 className="text-3xl font-semibold text-gray-800 mb-8">
             Featured Products
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -148,7 +152,7 @@ const CategoryPage = ({ params }: { params: { category: string } }) => {
                 </div>
               </Link>
             ))}
-          </div>
+          </div> */}
         </div>
       </main>
       <Footer />
