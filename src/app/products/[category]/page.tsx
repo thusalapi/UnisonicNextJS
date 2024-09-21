@@ -1,66 +1,12 @@
-"use client";
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
-import img1 from "@/assets/images/img3.png";
-import img2 from "@/assets/images/img2.png";
-import img3 from "@/assets/images/img20.png";
-import img4 from "@/assets/images/img21.png";
-
-const categories = [
-  { name: "All", slug: "all" },
-  { name: "Living Room", slug: "living-room" },
-  { name: "Office", slug: "office" },
-  { name: "Children", slug: "children" },
-  { name: "Pantry Cupboard", slug: "pantry-cupboard" },
-  { name: "Under Stairbase Cabinets", slug: "under-stairbase-cabinets" },
-  { name: "Custom Made", slug: "custom-made" },
-];
-const getProductsByCategory = (category: string) => {
-  // All products data
-  const allProducts = [
-    {
-      id: 1,
-      name: "Modern Sofa",
-      price: 999,
-      image: img1,
-      category: "living-room",
-    },
-    {
-      id: 2,
-      name: "Leather Armchair",
-      price: 599,
-      image: img2,
-      category: "living-room",
-    },
-    {
-      id: 3,
-      name: "Coffee Table",
-      price: 299,
-      image: img3,
-      category: "office",
-    },
-    { id: 4, name: "Bookshelf", price: 399, image: img4, category: "office" },
-  ];
-
-  // Return all products if "all" is selected
-  if (category === "all") {
-    return allProducts;
-  }
-
-  // Filter products based on category
-  return allProducts.filter((product) => product.category === category);
-};
+import { categories, getProductsByCategory } from "@/constants";
 
 const CategoryPage = ({ params }: { params: { category: string } }) => {
-  const [selectedCategory, setSelectedCategory] = useState(
-    params.category || "all"
-  );
-
-  const products = getProductsByCategory(selectedCategory);
+  const products = getProductsByCategory(params.category);
 
   const currentCategory = categories.find(
     (cat) => cat.slug === params.category
@@ -106,7 +52,7 @@ const CategoryPage = ({ params }: { params: { category: string } }) => {
                 className="bg-white rounded-lg shadow-lg overflow-hidden"
               >
                 <div className="relative w-full h-64">
-                  <Link href={`/products/${product.id}`}>
+                  <Link href={`/products/${product.category}/${product.id}`}>
                     <Image
                       src={product.image}
                       alt={product.name}
