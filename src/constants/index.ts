@@ -90,5 +90,5 @@ export const getProductsByCategory = (category: string) => {
 };
 
 export const getProductById = (id: string) => {
-  return products.find((p) => p.id === id);
+  return products.find((p) => p.id.toLowerCase() === id.toLowerCase());
 };

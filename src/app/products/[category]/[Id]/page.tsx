@@ -3,26 +3,45 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { getProductById } from "@/constants";
+import { getProductById, products } from "@/constants";
 
 export default function ProductPage({
   params,
 }: {
-  params: { category: string; id: string };
+  params: { category: string; id?: string; Id?: string };
 }) {
-  const product = getProductById(params.id);
+  // Handle both lowercase 'id' and uppercase 'Id'
+  const productId = params.id || params.Id;
+
+  console.log("Params:", params); // Debugging
+  console.log("Product ID:", productId); // Debugging
+  console.log("All products:", products); // Debugging
+
+  const product = productId ? getProductById(productId) : null;
+  console.log("Found product:", product); // Debugging
 
   if (!product) {
     return (
       <div className="flex flex-col min-h-screen bg-slate-200">
         <Navbar textColor="text-black" />
-        <main className="flex-grow container mx-auto px-4 py-16">
+        <main className="flex-grow container mx-auto px-4 py-16 text-black">
           <div className="mt-36 bg-white rounded-lg shadow-lg p-8">
             <h1 className="text-2xl font-bold text-red-600">
               Product not found
             </h1>
             <p className="mt-4">
-              Sorry, we couldn't find a product with ID {params.id}.
+              Sorry, we couldn't find a product with ID {params.id} in the{" "}
+              {params.category} category.
+            </p>
+            <p className="mt-4">
+              Debug info:
+              <br />
+              Params: {JSON.stringify(params)}
+              <br />
+              Available products:{" "}
+              {JSON.stringify(
+                products.map((p) => ({ id: p.id, category: p.category }))
+              )}
             </p>
             <Link
               href="/products/all"
