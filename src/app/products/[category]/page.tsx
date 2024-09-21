@@ -13,7 +13,7 @@ const CategoryPage = ({ params }: { params: { category: string } }) => {
   );
 
   return (
-    <div className="flex flex-col min-h-screen bg-slate-200">
+    <div className="flex flex-col min-h-screen bg-gray-200">
       <Navbar textColor="text-black" />
       <main className="flex-grow">
         <div className="container mx-auto px-4 py-16">

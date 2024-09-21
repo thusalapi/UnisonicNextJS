@@ -15,7 +15,7 @@ export default function ProductPage({
 
   if (!product) {
     return (
-      <div className="flex flex-col min-h-screen bg-gray-50">
+      <div className="flex flex-col min-h-screen bg-gray-200">
         <Navbar textColor="text-black" />
         <main className="flex-grow container mx-auto px-4 py-16">
           <div className="mt-36 bg-white rounded-lg shadow-lg p-8">
@@ -39,10 +39,14 @@ export default function ProductPage({
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
+    <div className="flex flex-col min-h-screen bg-gray-200">
       <Navbar textColor="text-black" />
-      <main className="flex-grow container mx-auto px-4 py-16">
-        <div className="mt-24 bg-white rounded-xl shadow-lg overflow-hidden">
+      <main className="flex-grow container w-3/5 mx-auto px-4 py-16 mb-10">
+        <h1 className="text-6xl font-bold text-gray-800 p-8 mt-32 ">
+          {" "}
+          {product.name}
+        </h1>
+        <div className=" bg-white rounded-xl shadow-lg overflow-hidden">
           <div className="md:flex">
             {/* Large Product Image */}
             <div className="md:w-2/3">
@@ -58,7 +62,7 @@ export default function ProductPage({
             </div>
 
             {/* Product Information */}
-            <div className="md:w-1/3 p-8">
+            <div className="md:w-1/3 p-8 ml-8">
               <div className="uppercase tracking-wide text-sm text-green-700 font-semibold">
                 {product.category}
               </div>
@@ -86,9 +90,12 @@ export default function ProductPage({
                 </ul>
               </div>
               <div className="mt-10 space-y-4">
-                <button className="w-full bg-green-800 text-white px-6 py-3 rounded-md hover:bg-green-700 transition-colors duration-300">
-                  Add to Cart
-                </button>
+                <Link
+                  href={`/contact`}
+                  className="block text-center w-full bg-green-800 text-white px-6 py-3 rounded-md hover:bg-green-700 transition-colors duration-300"
+                >
+                  Contact Us
+                </Link>
                 <Link
                   href={`/products/${product.category}`}
                   className="block text-center w-full border border-green-800 text-green-800 px-6 py-3 rounded-md hover:bg-green-50 transition-colors duration-300"

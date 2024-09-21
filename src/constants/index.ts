@@ -19,6 +19,17 @@ export const navLinks = [
   {
     label: "Products",
     href: "/products",
+    dropdown: [
+      { label: "Living Room", href: "/products/living-room" },
+      { label: "Office", href: "/products/office" },
+      { label: "Children", href: "/products/children" },
+      { label: "Pantry Cupboard", href: "/products/pantry-cupboard" },
+      {
+        label: "Under Staircase Cabinets",
+        href: "/products/under-stairbase-cabinets",
+      },
+      { label: "Custom Made", href: "/products/custom-made" },
+    ],
   },
   {
     label: "Blogs",
